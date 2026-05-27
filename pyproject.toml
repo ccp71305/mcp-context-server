@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-context-server"
+version = "1.0.0"
+description = "Local MCP server for session context management, Jira, Confluence, Git, and filesystem knowledge base"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "akundu" }]
+
+dependencies = [
+    "mcp[cli]>=1.9.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.3.0",
+    "gitpython>=3.1.43",
+    "aiofiles>=24.1.0",
+    "python-dateutil>=2.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.5.0",
+]
+
+[project.scripts]
+mcp-context-server = "mcp_context_server.main:main"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "N", "UP", "S", "B", "A", "C4", "SIM"]
+ignore = ["S101", "S603", "S607"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

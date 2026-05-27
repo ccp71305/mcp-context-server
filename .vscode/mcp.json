@@ -1,0 +1,19 @@
+{
+    "servers": {
+        "mcp-context-server": {
+            "type": "stdio",
+            "command": "C:\\Users\\akundu\\OneDrive - WiseTech Global Pty Ltd\\aiengg\\mcp\\mcp-summary-server\\.venv\\Scripts\\python.exe",
+            "args": [
+                "-m",
+                "mcp_context_server.main"
+            ],
+            "cwd": "C:\\Users\\akundu\\OneDrive - WiseTech Global Pty Ltd\\aiengg\\mcp\\mcp-summary-server",
+            "env": {
+                "MCP_SESSIONS_DIR": "C:\\Users\\akundu\\.mcp-context-server\\sessions",
+                "MCP_KB_ROOTS": "[\"C:\\\\Users\\\\akundu\\\\projects\",\"C:\\\\Users\\\\akundu\\\\OneDrive - WiseTech Global Pty Ltd\\\\aiengg\"]",
+                "MCP_GIT_DEFAULT_REPOS": "[\"C:\\\\Users\\\\akundu\\\\projects\\\\mercury-services-commons\"]",
+                "MCP_LOG_LEVEL": "INFO"
+            }
+        }
+    }
+}

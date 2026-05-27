@@ -1,0 +1,29 @@
+# Dependencies and build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.env
+.venv/
+venv/
+
+# Test cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+*.iml
+.vscode/settings.json
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Sessions (local data — user-specific, not project code)
+# Don't commit session data to git
