@@ -2,16 +2,16 @@
     "servers": {
         "mcp-context-server": {
             "type": "stdio",
-            "command": "C:\\Users\\akundu\\OneDrive - WiseTech Global Pty Ltd\\aiengg\\mcp\\mcp-summary-server\\.venv\\Scripts\\python.exe",
+            "command": "C:\\Users\\arijit.kundu\\OneDrive - WiseTech Global\\aiengg\\mcp\\mcp-summary-server\\.venv\\Scripts\\python.exe",
             "args": [
                 "-m",
                 "mcp_context_server.main"
             ],
-            "cwd": "C:\\Users\\akundu\\OneDrive - WiseTech Global Pty Ltd\\aiengg\\mcp\\mcp-summary-server",
+            "cwd": "C:\\Users\\arijit.kundu\\OneDrive - WiseTech Global\\aiengg\\mcp\\mcp-summary-server",
             "env": {
-                "MCP_SESSIONS_DIR": "C:\\Users\\akundu\\.mcp-context-server\\sessions",
-                "MCP_KB_ROOTS": "[\"C:\\\\Users\\\\akundu\\\\projects\",\"C:\\\\Users\\\\akundu\\\\OneDrive - WiseTech Global Pty Ltd\\\\aiengg\"]",
-                "MCP_GIT_DEFAULT_REPOS": "[\"C:\\\\Users\\\\akundu\\\\projects\\\\mercury-services-commons\"]",
+                "MCP_SESSIONS_DIR": "C:\\Users\\arijit.kundu\\.mcp-context-server\\sessions",
+                "MCP_KB_ROOTS": "[\"C:\\\\Users\\\\arijit.kundu\\\\projects\",\"C:\\\\Users\\\\arijit.kundu\\\\OneDrive - WiseTech Global\\\\aiengg\",\"C:\\\\Users\\\\arijit.kundu\\\\OneDrive - WiseTech Global\\\\claude-workspace\\\\_kbase\"]",
+                "MCP_GIT_DEFAULT_REPOS": "[\"C:\\\\Users\\\\arijit.kundu\\\\projects\\\\mercury-services-commons\",\"C:\\\\Users\\\\arijit.kundu\\\\projects\\\\mercury-services\",\"C:\\\\Users\\\\arijit.kundu\\\\projects\\\\appianway\"]",
                 "MCP_LOG_LEVEL": "INFO"
             }
         }

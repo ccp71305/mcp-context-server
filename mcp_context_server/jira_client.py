@@ -70,7 +70,7 @@ class JiraClient:
     async def get_issue(self, issue_key: str) -> dict:
         """Fetch a single Jira issue by key (e.g., PROJ-123)."""
         client = await self._get_client()
-        resp = await client.get(f"/rest/api/3/issue/{issue_key}")
+        resp = await client.get(f"/rest/api/2/issue/{issue_key}")
         resp.raise_for_status()
         data = resp.json()
         fields = data.get("fields", {})
@@ -107,7 +107,7 @@ class JiraClient:
         """Search issues using JQL."""
         client = await self._get_client()
         resp = await client.get(
-            "/rest/api/3/search",
+            "/rest/api/2/search",
             params={"jql": jql, "maxResults": min(max_results, 100), "fields": "summary,status,assignee,priority,issuetype,labels,updated"},
         )
         resp.raise_for_status()
@@ -131,7 +131,7 @@ class JiraClient:
         """Get comments on an issue."""
         client = await self._get_client()
         resp = await client.get(
-            f"/rest/api/3/issue/{issue_key}/comment",
+            f"/rest/api/2/issue/{issue_key}/comment",
             params={"maxResults": max_results, "orderBy": "-created"},
         )
         resp.raise_for_status()
@@ -160,7 +160,7 @@ class JiraClient:
                 "content": [{"type": "paragraph", "content": [{"type": "text", "text": body}]}],
             }
         }
-        resp = await client.post(f"/rest/api/3/issue/{issue_key}/comment", json=payload)
+        resp = await client.post(f"/rest/api/2/issue/{issue_key}/comment", json=payload)
         resp.raise_for_status()
         return {"status": "ok", "issue_key": issue_key}
 
